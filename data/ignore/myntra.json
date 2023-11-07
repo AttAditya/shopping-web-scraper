@@ -1,0 +1,20 @@
+{
+    "source": "https://www.myntra.com",
+    "name": "Myntra",
+    "search_dest": "/",
+    "user_agents": [],
+    "scrape_data": {
+        "item": [
+            ["li"],
+            {"class": "product-base"}
+        ],
+        "name": [
+            ["h4"],
+            {"class": "product-product"}
+        ],
+        "price": [
+            ["span"],
+            {"class": "product-discountedPrice"}
+        ]
+    }
+}

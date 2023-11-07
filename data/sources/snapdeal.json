@@ -1,0 +1,20 @@
+{
+    "source": "https://www.snapdeal.com",
+    "name": "Snapdeal",
+    "search_dest": "/search?keyword=",
+    "user_agents": [],
+    "scrape_data": {
+        "item": [
+            ["div"],
+            {"class": "product-tuple-listing"}
+        ],
+        "name": [
+            ["p"],
+            {"class": "product-title"}
+        ],
+        "price": [
+            ["span"],
+            {"class": "product-price"}
+        ]
+    }
+}

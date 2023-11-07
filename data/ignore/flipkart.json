@@ -1,0 +1,20 @@
+{
+    "source": "https://www.flipkart.com",
+    "name": "Flipkart",
+    "search_dest": "/search?q=",
+    "user_agents": [],
+    "scrape_data": {
+        "item": [
+            ["div"],
+            {"class": "_1AtVbE"}
+        ],
+        "name": [
+            ["div"],
+            {"class": "_4rR01T"}
+        ],
+        "price": [
+            ["div"],
+            {"class": "_30jeq3 _1_WHN1"}
+        ]
+    }
+}

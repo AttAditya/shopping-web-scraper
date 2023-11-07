@@ -1,0 +1,1 @@
+from modules.cli import main as cli_main

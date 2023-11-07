@@ -1,0 +1,20 @@
+{
+    "source": "https://www.amazon.in",
+    "name": "Amazon",
+    "search_dest": "/s?k=",
+    "user_agents": [],
+    "scrape_data": {
+        "item": [
+            ["div"],
+            {"class": "s-result-item"}
+        ],
+        "name": [
+            ["span"],
+            {"class": "a-text-normal"}
+        ],
+        "price": [
+            ["span"],
+            {"class": "a-offscreen"}
+        ]
+    }
+}
