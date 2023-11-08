@@ -16,11 +16,12 @@ def search() -> None:
         name: str = product["name"]
         price: str = product["price"]
         source: str = product["source"]
+        source = f"({source})"
 
         if len(name) > 30:
             name = name[:27] + "..."
         
-        print(f"{name:>20} - {price} ({source})")
+        print(f"{name:<30} {source:<20} {price}")
     
     return None
 

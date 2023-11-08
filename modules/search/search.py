@@ -5,7 +5,18 @@ def int_extractor(string: str) -> int:
     Extracts integer from string
     """
 
-    return int("".join([c for c in string if c.isdigit()]))
+    int_string: str = ""
+
+    for ch in [c for c in string]:
+        if ch == "." and int_string:
+            break
+
+        if not ch.isdigit():
+            continue
+
+        int_string += ch
+
+    return int(int_string)
 
 def search_item(query: str, *, max_items: int=25) -> list[dict[str, str]]:
     """
@@ -20,6 +31,10 @@ def search_item(query: str, *, max_items: int=25) -> list[dict[str, str]]:
         collected_data.extend(source_data)
 
     collected_data.sort(key=lambda product: int_extractor(product["price"]))
+    for pid, product in enumerate(collected_data):
+        price_int = int_extractor(product["price"])
+        price = f"{price_int:,}"
+        collected_data[pid]["price"] = f"Rs. {price:>10}"
 
     return collected_data[:max_items]
 
